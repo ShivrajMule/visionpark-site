@@ -1,114 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VisionPark POS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>VisionPark POS – Smart Offline Parking Management App</title>
+  <meta name="description" content="VisionPark POS is an offline-first parking management application with AI number plate recognition, smart pricing, and secure UPI integration. No internet required." />
+  <meta name="keywords" content="parking POS, offline parking app, AI number plate scanner, parking management software, Android POS" />
+  <meta name="author" content="VisionPark POS" />
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0B0F1A;
-  color: white;
-}
+  <meta property="og:title" content="VisionPark POS – Smart Parking Management" />
+  <meta property="og:description" content="Smart Parking Management with Offline AI. Fast, secure, and built for real parking operators." />
+  <meta property="og:type" content="website" />
 
-.container {
-  width: 90%;
-  margin: auto;
-  text-align: center;
-}
-
-.hero {
-  padding: 80px 0;
-}
-
-h1 {
-  font-size: 48px;
-}
-
-p {
-  color: #aaa;
-}
-
-.btn {
-  background: #00D1FF;
-  color: black;
-  padding: 15px 25px;
-  text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
-  margin-top: 20px;
-}
-
-.section {
-  padding: 60px 0;
-}
-
-.features {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: #111827;
-  padding: 20px;
-  border-radius: 10px;
-  width: 200px;
-}
-
-img {
-  max-width: 250px;
-  border-radius: 10px;
-}
-</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-
 <body>
 
-<div class="container">
+<nav id="navbar">
+  <a href="#" class="nav-logo">Vision<span>Park</span> POS</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#advanced">Advanced</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#download" class="nav-cta">Download APK</a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>VisionPark POS</h1>
-    <p>Smart Parking Management with Offline AI</p>
-    <a class="btn" href="YOUR_GOOGLE_DRIVE_LINK">Download APK</a>
-  </div>
+<section class="hero">
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
 
-  <!-- FEATURES -->
-  <div class="section">
-    <h2>Features</h2>
-    <div class="features">
-      <div class="card">Offline AI Scanner</div>
-      <div class="card">Smart Pricing</div>
-      <div class="card">Revenue Tracking</div>
-      <div class="card">Fast Entry</div>
+  <div class="hero-content fade-up">
+    <div class="hero-badge">Now Available · Android APK</div>
+    <h1>Vision<span class="highlight">Park</span><br>POS</h1>
+    <p class="hero-sub">Smart Parking Management with Offline AI</p>
+    <p class="hero-tagline">"No internet. No manual entry. No confusion."</p>
+    <div class="hero-actions">
+      <a href="#download" class="btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18"><path d="M12 3v13m0 0l-4-4m4 4l4-4M3 21h18"/></svg>
+        Download APK
+      </a>
+      <a href="#features" class="btn-ghost">See Features →</a>
     </div>
   </div>
 
-  <!-- SCREENSHOTS -->
-  <div class="section">
-    <h2>App Screens</h2>
-    <img src="screenshot1.png">
-    <img src="screenshot2.png">
+  <div class="hero-visual fade-up">
+    <div class="phone-wrap">
+      <div class="phone-glow"></div>
+      <div class="phone-frame">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="phone-ui-bar">🅿️ &nbsp;VisionPark POS · Live</div>
+          <div class="phone-ui-plate">
+            <div class="plate-text">MH 20 AB 1234</div>
+            <div class="plate-label">✅ Vehicle Detected · Offline AI</div>
+          </div>
+          <div class="phone-ui-stats">
+            <div class="stat-card">
+              <div class="stat-val">₹4,820</div>
+              <div class="stat-label">Today's Revenue</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-val">38</div>
+              <div class="stat-label">Vehicles In</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-val">12</div>
+              <div class="stat-label">Slots Free</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-val">2.4s</div>
+              <div class="stat-label">Avg Entry</div>
+            </div>
+          </div>
+          <div class="phone-scan-anim">
+            <div class="scan-label">📷 Scanning vehicle…</div>
+            <div class="scan-bar"></div>
+            <div class="scan-label" style="color:var(--accent)">AI Active · No Internet Needed</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-  <!-- DOWNLOAD -->
-  <div class="section">
-    <h2>Get Started</h2>
-    <a class="btn" href="YOUR_GOOGLE_DRIVE_LINK">Download Now</a>
+<section class="features" id="features">
+  <p class="section-label">What We Offer</p>
+  <h2 class="section-title fade-up">Packed with Powerful Features</h2>
+  <p class="section-desc fade-up">Everything a parking business needs — built into one smart, lightweight app.</p>
+
+  <div class="features-grid">
+    <div class="feature-card fade-up">
+      <div class="feat-icon">🤖</div>
+      <div class="feat-title">Offline AI Scanner</div>
+      <p class="feat-desc">Detect and read vehicle number plates using on-device AI — no internet connection required. Works in remote areas and during outages.</p>
+    </div>
+    <div class="feature-card fade-up">
+      <div class="feat-icon">💰</div>
+      <div class="feat-title">Smart Pricing</div>
+      <p class="feat-desc">Automatic pricing system that calculates fees based on time, vehicle type, and custom rules. No manual math, no errors.</p>
+    </div>
+    <div class="feature-card fade-up">
+      <div class="feat-icon">📊</div>
+      <div class="feat-title">Revenue Tracking</div>
+      <p class="feat-desc">Track daily, weekly, and monthly earnings at a glance. Detailed reports help you understand your business better.</p>
+    </div>
+    <div class="feature-card fade-up">
+      <div class="feat-icon">⚡</div>
+      <div class="feat-title">Fast Entry</div>
+      <p class="feat-desc">Reduce vehicle waiting time with instant plate detection and auto-entry logging. Handle peak hours without stress.</p>
+    </div>
   </div>
+</section>
 
-  <!-- CONTACT -->
-  <div class="section">
-    <h2>Contact</h2>
-    <p>WhatsApp: +91 XXXXXXXX</p>
-    <p>Email: your@email.com</p>
+<section class="adv-features" id="advanced">
+  <p class="section-label">Advanced Capabilities</p>
+  <h2 class="section-title fade-up">Everything You Need to Run a Smarter Parking Business</h2>
+  <p class="section-desc fade-up">From gate control to UPI payments — VisionPark POS handles it all, in one app.</p>
+
+  <div class="adv-list">
+    <div class="adv-item fade-up">
+      <div class="adv-text">
+        <span class="adv-tag">Finance</span>
+        <div class="adv-title">Effortless Revenue Tracking</div>
+        <p class="adv-desc">Manage parking revenue with full visibility on Cash vs. Online split. Share daily ledger reports instantly with ownership.</p>
+        <div class="adv-badge-row">
+          <span class="adv-badge">Daily Ledger</span>
+          <span class="adv-badge">Cash vs Online</span>
+          <span class="adv-badge">Shareable Report</span>
+        </div>
+      </div>
+      <div class="adv-visual">
+        <div class="adv-mini-ui">
+          <div class="adv-mini-title">💰 Daily Ledger</div>
+          <div class="adv-mini-row"><span class="lbl">Total Revenue</span><span class="val accent">₹860</span></div>
+          <div class="adv-mini-row"><span class="lbl">Completed Bills</span><span class="val">5</span></div>
+          <div class="adv-mini-row"><span class="lbl">💵 Cash</span><span class="val">₹860</span></div>
+          <div class="adv-mini-row"><span class="lbl">🌐 Online</span><span class="val green">₹900</span></div>
+          <div class="adv-mini-btn">⬆ SHARE DAILY REPORT</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="adv-item reverse fade-up">
+      <div class="adv-text">
+        <span class="adv-tag">AI · ML Kit</span>
+        <div class="adv-title">Lightning Fast Entry with Offline AI OCR</div>
+        <p class="adv-desc">Instant plate recognition using Google ML Kit — zero network needed. Point the camera, the plate is read and logged in under 2 seconds.</p>
+        <div class="adv-badge-row">
+          <span class="adv-badge">Google ML Kit</span>
+          <span class="adv-badge">Zero Network</span>
+          <span class="adv-badge">&lt;2s Detection</span>
+        </div>
+      </div>
+      <div class="adv-visual">
+        <div class="adv-mini-ui" style="text-align:center">
+          <div class="adv-mini-title">📷 Scanning Plate…</div>
+          <div style="font-family:var(--font-head); font-size:1.4rem; font-weight:800; letter-spacing:0.1em; background:linear-gradient(135deg,var(--accent2),var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin:0.6rem 0;">DL 00 AB 1234</div>
+          <div class="adv-mini-btn" style="background:linear-gradient(135deg,#00b300,#00e676); color:#000">✓ PLATE CONFIRMED</div>
+          <div class="adv-mini-tag-row" style="justify-content:center; margin-top:0.7rem">
+            <span class="adv-mini-tag green">Offline AI Active</span>
+            <span class="adv-mini-tag">No Internet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="adv-item fade-up">
+      <div class="adv-text">
+        <span class="adv-tag">Payments</span>
+        <div class="adv-title">Seamless POS &amp; UPI Integration</div>
+        <p class="adv-desc">Calculate bills, generate UPI QR codes, and track payment types — cash or online. Full billing workflow in a few taps.</p>
+        <div class="adv-badge-row">
+          <span class="adv-badge">UPI QR Code</span>
+          <span class="adv-badge">Cash &amp; Online</span>
+          <span class="adv-badge">Auto Bill</span>
+        </div>
+      </div>
+      <div class="adv-visual">
+        <div class="adv-mini-ui">
+          <div class="adv-mini-title">💳 Complete Payment</div>
+          <div class="adv-mini-row"><span class="lbl">Vehicle</span><span class="val">DL 00 AB 1234</span></div>
+          <div class="adv-mini-row"><span class="lbl">Amount</span><span class="val accent">₹60</span></div>
+          <div class="adv-mini-row"><span class="lbl">Duration</span><span class="val">2h 10m</span></div>
+          <div style="display:flex;gap:0.4rem;margin-top:0.8rem">
+            <div style="flex:1;padding:0.4rem;background:rgba(0,200,255,0.15);border:1px solid var(--accent);border-radius:7px;text-align:center;font-size:0.72rem;font-weight:700;color:var(--accent)">CASH</div>
+            <div style="flex:1;padding:0.4rem;background:rgba(0,128,255,0.15);border:1px solid var(--accent2);border-radius:7px;text-align:center;font-size:0.72rem;font-weight:700;color:var(--accent2)">UPI / QR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="adv-item reverse fade-up">
+      <div class="adv-text">
+        <span class="adv-tag">Admin</span>
+        <div class="adv-title">Secure Admin Control &amp; Custom Pricing</div>
+        <p class="adv-desc">PIN-protected access, set dynamic pricing rules per vehicle type and duration, and view detailed activity logs — full control for the owner.</p>
+        <div class="adv-badge-row">
+          <span class="adv-badge">PIN Protection</span>
+          <span class="adv-badge">Dynamic Pricing</span>
+          <span class="adv-badge">Activity Logs</span>
+        </div>
+      </div>
+      <div class="adv-visual">
+        <div class="adv-mini-ui">
+          <div class="adv-mini-title">🔐 Admin Control</div>
+          <div class="adv-mini-row"><span class="lbl">2-Wheeler ≤60m</span><span class="val accent">₹50</span></div>
+          <div class="adv-mini-row"><span class="lbl">2-Wheeler ≤120m</span><span class="val accent">₹100</span></div>
+          <div class="adv-mini-row"><span class="lbl">4-Wheeler ≤60m</span><span class="val accent">₹100</span></div>
+          <div class="adv-mini-row"><span class="lbl">4-Wheeler ≤120m</span><span class="val accent">₹200</span></div>
+          <div class="adv-mini-btn">+ ADD TIER</div>
+        </div>
+      </div>
+    </div>
   </div>
+</section>
 
-</div>
+<section class="screenshots" id="screenshots">
+  <p class="section-label">App Preview</p>
+  <h2 class="section-title fade-up">See It in Action</h2>
+  <p class="section-desc fade-up">Clean, intuitive screens designed for real parking operators.</p>
 
+  <div class="screenshots-grid">
+    <div class="screenshot-card fade-up">
+      <img src="images/screen1.png" alt="Dashboard Screen" loading="lazy" />
+      <div class="screenshot-placeholder">
+        <div class="sc-icon">📱</div>
+        <span>Dashboard</span>
+        <span style="font-size:0.7rem;opacity:0.5">images/screen1.png</span>
+      </div>
+    </div>
+    <div class="screenshot-card fade-up">
+      <img src="images/screen2.png" alt="Scanner Screen" loading="lazy" />
+      <div class="screenshot-placeholder">
+        <div class="sc-icon">📷</div>
+        <span>AI Scanner</span>
+        <span style="font-size:0.7rem;opacity:0.5">images/screen2.png</span>
+      </div>
+    </div>
+    <div class="screenshot-card fade-up">
+      <img src="images/screen3.png" alt="Revenue Screen" loading="lazy" />
+      <div class="screenshot-placeholder">
+        <div class="sc-icon">📈</div>
+        <span>Revenue</span>
+        <span style="font-size:0.7rem;opacity:0.5">images/screen3.png</span>
+      </div>
+    </div>
+    <div class="screenshot-card fade-up">
+      <img src="images/screen4.png" alt="Entry Log Screen" loading="lazy" />
+      <div class="screenshot-placeholder">
+        <div class="sc-icon">🗂️</div>
+        <span>Entry Logs</span>
+        <span style="font-size:0.7rem;opacity:0.5">images/screen4.png</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <div class="why-inner">
+    <div class="why-text fade-up">
+      <p class="section-label" style="text-align:left">Why VisionPark?</p>
+      <h2>Built for Real<br>Parking Businesses</h2>
+      <p>We didn't build a generic app. VisionPark POS was designed from the ground up by talking to actual parking lot owners — and solving their actual problems.</p>
+      <div class="why-items">
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-text">
+            <strong>Works Without Internet</strong>
+            <span>Full functionality offline — AI runs on your device, not the cloud.</span>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-text">
+            <strong>Built for Real Parking Businesses</strong>
+            <span>Designed with operators in mind — simple, fast, practical.</span>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-text">
+            <strong>Easy to Use</strong>
+            <span>No training needed. Your staff can start in under 5 minutes.</span>
+          </div>
+        </div>
+        <div class="why-item">
+          <div class="why-check">✓</div>
+          <div class="why-item-text">
+            <strong>Saves Time &amp; Increases Profit</strong>
+            <span>Faster entry, accurate billing, zero revenue leakage.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="why-visual">
+      <div class="stat-big fade-up">
+        <div class="stat-big-val">3×</div>
+        <div class="stat-big-label">Faster vehicle entry compared to manual logging</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-big fade-up" style="padding:1.4rem 1.5rem">
+          <div class="stat-big-val" style="font-size:2.2rem">99%</div>
+          <div class="stat-big-label">AI plate detection accuracy</div>
+        </div>
+        <div class="stat-big fade-up" style="padding:1.4rem 1.5rem">
+          <div class="stat-big-val" style="font-size:2.2rem">0G</div>
+          <div class="stat-big-label">Data needed for AI scanning</div>
+        </div>
+      </div>
+      <div class="stat-big fade-up">
+        <div class="stat-big-val">₹0</div>
+        <div class="stat-big-label">Monthly fee — one-time APK, yours forever</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="download" id="download">
+  <div class="download-box fade-up">
+    <p class="section-label" style="text-align:center">Quick Setup</p>
+    <h2>Get Started in 2 Minutes</h2>
+    <p>No account needed. No setup wizard. Just download and park.</p>
+
+    <div class="steps-row">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-label">Download APK</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-label">Open the file</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-label">Allow install</div>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-label">Start using!</div>
+      </div>
+    </div>
+
+    <div class="dl-primary-row">
+      <a href="visionpark-pos.apk" class="btn-download-big" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v13m0 0l-4-4m4 4l4-4M3 21h18"/></svg>
+        Download APK Free
+      </a>
+      <p style="font-size:0.82rem; color:var(--muted)">Android 8.0+ · ~18 MB · No ads · No subscription</p>
+    </div>
+
+    <div class="dl-or-divider">
+      <span class="dl-or-text">If that link doesn't work, try a mirror below</span>
+    </div>
+    <p class="dl-mirrors-label">🔗 Alternative Download Links</p>
+    <div class="dl-mirrors">
+      <a href="https://drive.google.com/uc?export=download&id=1jc7gQMXrZ9Tv8X1_YY3t6Y0LpLqDcVmG" class="dl-mirror-btn" target="_blank" rel="noopener">
+        <span class="mirror-icon">📁</span> Google Drive 1
+        <span class="mirror-badge">Link 1</span>
+      </a>
+      <a href="https://drive.usercontent.google.com/download?id=1jc7gQMXrZ9Tv8X1_YY3t6Y0LpLqDcVmG&export=download" class="dl-mirror-btn" target="_blank" rel="noopener">
+        <span class="mirror-icon">📁</span> Google Drive 2
+        <span class="mirror-badge">Link 2</span>
+      </a>
+      <a href="https://t.me/your-telegram-channel" class="dl-mirror-btn" target="_blank" rel="noopener">
+        <span class="mirror-icon">✈️</span> Telegram
+        <span class="mirror-badge">Link 3</span>
+      </a>
+    </div>
+    <p class="dl-note">
+      All links point to the <strong>same APK file</strong>. If one doesn't open, simply tap another. Having trouble? <a href="#contact" style="color:var(--accent); text-decoration:none;">Contact us</a> and we'll send it directly.
+    </p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <p class="section-label">Get in Touch</p>
+  <h2 class="section-title fade-up">We're Here to Help</h2>
+  <p class="section-desc fade-up">Have questions before downloading? Reach out any way you like.</p>
+
+  <div class="contact-grid">
+    <a href="tel:+918766527560" class="contact-card fade-up">
+      <div class="contact-icon">📞</div>
+      <div class="contact-type">Phone</div>
+      <div class="contact-val">+91 87665 27560</div>
+      <div class="contact-hint">Available 24/7 · Anytime</div>
+    </a>
+    <a href="https://wa.me/918766527560" class="contact-card fade-up" target="_blank" rel="noopener">
+      <div class="contact-icon">💬</div>
+      <div class="contact-type">WhatsApp</div>
+      <div class="contact-val">+91 87665 27560</div>
+      <div class="contact-hint">Tap to chat instantly</div>
+    </a>
+    <a href="mailto:workonlyforshivraj@gmail.com" class="contact-card fade-up">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-type">Email</div>
+      <div class="contact-val" style="font-size:0.88rem;">workonlyforshivraj@gmail.com</div>
+      <div class="contact-hint">We reply within 24 hours</div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Vision<span>Park</span> POS</div>
+  <div class="footer-copy">© 2026 VisionPark POS. All rights reserved.</div>
+  <div class="footer-links">
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script src="js/script.js" defer></script>
 </body>
 </html>
